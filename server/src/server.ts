@@ -1,10 +1,16 @@
 import express from 'express';
+import cors from 'cors';
+import routes from './routes';
 
 // Declaring server.
 const server = express();
 
+server.use(cors())
+
 // Server understands JSON.
 server.use(express.json());
+
+server.use(routes);
 
 // Route for server testing.
 server.get("/", (req, res) => {

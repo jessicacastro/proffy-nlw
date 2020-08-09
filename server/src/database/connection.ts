@@ -1,6 +1,11 @@
 import knex from 'knex';
 import path from 'path';
 
+/**
+ * Migrations -> Controlam a versão do banco de dados.
+ * 
+ **/ 
+
 const db = knex({
   client: 'sqlite3',
   connection: {
